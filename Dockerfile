@@ -17,4 +17,6 @@ RUN apk add ffmpeg
 COPY --from=app-build /bin/app /bin/app
 WORKDIR /app
 
+COPY templates/ ./templates/
+
 ENTRYPOINT ["/bin/app"]
